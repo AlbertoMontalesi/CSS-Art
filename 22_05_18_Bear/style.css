@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-bg-color: lightpink;
+  --bear-color : rgb(151, 45, 45);
+  --inner-ear-color: burlywood;
+  --mouth-color: burlywood;
+  --nose-color: black;
+  --eyes-color: black;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+}
+
+.container {
+  width:500px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+}
+
+
+/* face */
+
+.face {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--bear-color);
+  z-index: 2;
+}
+
+
+
+/* ears */
+
+.ear {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color:var(--bear-color);
+    border-radius: 50%;
+    top: -300px;
+}
+
+
+.ear-right {
+  top: -380px;
+  right: -220px;
+}
+
+
+.inner-ear {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--inner-ear-color);
+  position: relative;
+  
+}
+
+.inner-ear-left {
+  top:-600px;
+  right: -17px;
+}
+
+.inner-ear-right {
+  top: -540px;
+  right: -225px;
+}
+
+
+
+/* mouth */
+.mouth {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+  top: -280px;
+  right: -120px;
+  background-color: var(--mouth-color);
+  z-index: 3;
+}
+
+
+
+/* nose */
+
+.nose {
+  width: 15px;
+  height: 15px;
+  background-color: var(--nose-color);
+  border-radius: 50%;
+  position: relative;
+  top: -330px;
+  right: -143px; 
+  z-index: 4;
+}
+
+
+
+/* eyes */
+.eye {
+  width: 15px;
+  height: 15px;
+  background-color: var(--eyes-color);
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+  
+  
+}
+
+.eye-left{
+  top:-380px;
+  right: -100px;
+}
+
+.eye-right {
+  top: -395px;
+  right: -180px;
+}
+
+
+
+/* shadow */
+
+
+.face,
+.ear-right {
+  box-shadow: .5px .5px 1px 1px black  
+}
