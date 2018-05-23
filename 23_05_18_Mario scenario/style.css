@@ -1,0 +1,149 @@
+:root {
+  --hills-primary-color: #00C000;
+  --sky-color: #00FFFF;
+  --grass-color: #00F455;
+  --grass-texture: var(--hills-primary-color);
+  --sun-color: #FD9600;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--sky-color);
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* hills */
+
+.hills {
+  height: 60vh;
+  margin-top: 20vh;
+  display: flex;
+}
+
+.hill {
+  height: inherit;
+  width: inherit;
+  width: 33.3vw;
+  border-top-left-radius: 80%;
+  border-top-right-radius: 80%;
+  background-color: var(--hills-primary-color);
+  margin-right: 20px;
+}
+
+
+/* eyes */
+
+.eye {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+}
+
+.first-eye-left {
+  top: 100px;
+  right: -200px;
+}
+
+.first-eye-right {
+  top: 70px;
+  right: -300px;
+}
+
+.second-eye-left {
+  top: 100px;
+  right: -400px;
+}
+
+.second-eye-right {
+  top: 70px;
+  right: -300px;
+}
+
+
+
+
+/* grass */
+
+.grass {
+  width: 100vw;
+  height: 20vh;
+  background-color: var(--grass-color);
+
+  background-image: -moz-linear-gradient(0deg, var(--grass-color), var(--grass-color) 1px, var(--grass-texture) 3px, var(--grass-texture) 5px, var(--grass-color) 2px);
+
+  background-image: -webkit-linear-gradient(0deg, var(--grass-color), var(--grass-color) 1px, var(--grass-texture) 3px, var(--grass-texture) 5px, var(--grass-color) 2px);
+
+
+  background-repeat: repeat;
+  background-size: 5px 10px;
+}
+
+
+
+/* mario */
+.mario {
+  background-image: url(mario.png);
+  position: absolute;
+  height: 173px;
+  width: 200px;
+  top: 60vh;
+  right: 10vw;
+  z-index: 2;
+}
+
+
+/* sun */
+
+
+.sun {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: var(--sun-color);
+  border-radius: 50%;
+  right: 5vw;
+  top: 2vh;
+}
+
+.sun-eye-left,
+.sun-eye-right {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  position: relative;
+}
+.sun-eye-left {
+ top: 25px;
+ left: 20px; 
+ border-top-right-radius: 100%;
+ border-bottom-right-radius: 20%;
+}
+
+.sun-eye-right {
+  top: 6px;
+  left: 60px;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 20%;
+}
+
+.mouth {
+  position: relative;
+  width: 40px;
+  height: 5px;
+  background-color: black;
+  top: 30px;
+  left: 30px;  
+}
